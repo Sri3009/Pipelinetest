@@ -8,7 +8,7 @@ pipeline {
          }
          stage('create file'){
          steps{
-   
+         sh 'rm -rf newfile2.txt'
          writeFile file: "newfile2.txt", text: "This file is useful, need to archive it." 
          sh 'ls'
          }
@@ -20,7 +20,7 @@ pipeline {
          }
         stage('commit changes'){
          steps{
-         sh 'git commit -m "this is to test pipeline project from jenkins dashboard" newfile2'
+         sh 'git commit -m "this is to test pipeline project from jenkins dashboard" newfile2.txt'
          }
          }
     stage('push'){
