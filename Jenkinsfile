@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('create branch')
+        stage('create branch'){
         steps{
             sh 'git branch newtestbranch4'
         }
