@@ -22,7 +22,7 @@ pipeline {
          sh 'git add .'
          }
          }
-         stage('commit changes')
+        stage('commit changes'){
          steps{
          sh 'git commit -am "this is to test pipeline project from jenkins dashboard"'
          }
