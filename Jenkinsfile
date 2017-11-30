@@ -1,21 +1,26 @@
 pipeline {
     agent any
     stages {
+        stage('create branch')
+        steps{
+            sh 'git branch newtestbranch4'
+        }
+    }
          stage('checkout'){
          steps{
-         sh 'git checkout newtestbranch3'
+         sh 'git checkout newtestbranch4'
          }
          }
          stage('create file'){
          steps{
-         sh 'rm -rf newfile2.txt'
          writeFile file: "newfile2.txt", text: "This file is useful, need to archive it." 
          sh 'ls'
+         sh 'cat newfile2.txt'
          }
          }
          stage('add file'){
          steps{
-         sh 'git add .'
+         sh 'git add newfile2.txt'
          }
          }
         stage('commit changes'){
@@ -25,7 +30,7 @@ pipeline {
          }
     stage('push'){
          steps{
-         sh 'git push origin newtestbranch3'
+         sh 'git push origin newtestbranch4'
          }
          }
 
