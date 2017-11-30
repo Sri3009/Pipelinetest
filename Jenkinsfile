@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Create branch'){
-          steps{
-            sh 'git branch newtestbranch3'
-            }
-           }
          stage('checkout'){
          steps{
          sh 'git checkout newtestbranch3'
