@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Create branch'){
           steps{
-            sh 'git branch newtestbranch2'
+            sh 'git branch newtestbranch3'
             }
            }
          stage('checkout'){
@@ -24,7 +24,7 @@ pipeline {
          }
         stage('commit changes'){
          steps{
-         sh 'git commit -am "this is to test pipeline project from jenkins dashboard"'
+         sh 'git commit -m "this is to test pipeline project from jenkins dashboard" newfile'
          }
          }
     stage('push'){
