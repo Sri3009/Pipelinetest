@@ -8,7 +8,8 @@ pipeline {
          }
          stage('create file'){
          steps{
-         sh 'touch newfile'
+   
+         writeFile file: "newfile1.txt", text: "This file is useful, need to archive it." 
          sh 'ls'
          }
          }
