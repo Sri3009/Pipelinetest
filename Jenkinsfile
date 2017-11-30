@@ -27,7 +27,7 @@ pipeline {
          sh 'git commit -am "this is to test pipeline project from jenkins dashboard"'
          }
          }
-         stage('push')
+    stage('push'){
          steps{
          sh 'git push origin newtestbranch2'
          }
