@@ -8,14 +8,14 @@ pipeline {
          }
          stage('create file'){
          steps{
-         writeFile file: "newfile.txt1", text: "This file is useful, need to archive it." 
+         writeFile file: "newfile1.txt", text: "This file is useful, need to archive it." 
          sh 'ls'
          sh 'cat newfile1.txt'
          }
          }
          stage('add file'){
          steps{
-         sh 'git add newfile.txt'
+         sh 'git add newfile1.txt'
          }
          }
         stage('commit changes'){
