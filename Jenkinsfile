@@ -3,7 +3,7 @@ pipeline {
     stages {
 stage('message') {
             steps {
-                sh 'echo "successfully finished"'
+                sh 'echo "successfully finished.second commit"'
          
                 
             }
