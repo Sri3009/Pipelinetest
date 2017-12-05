@@ -3,7 +3,7 @@ pipeline {
     stages {
          stage('checkout'){
          steps{
-         sh 'git checkout newtestbranch1'
+         sh 'git checkout newtestbranch'
          }
          }
          stage('create file'){
@@ -15,7 +15,7 @@ pipeline {
          }
          stage('add file'){
          steps{
-         sh 'git add newfile2.txt'
+         sh 'git add newfile.txt'
          }
          }
         stage('commit changes'){
@@ -25,7 +25,7 @@ pipeline {
          }
     stage('push'){
          steps{
-         sh 'git push origin newtestbranch4'
+         sh 'git push origin newtestbranch'
          }
          }
 
